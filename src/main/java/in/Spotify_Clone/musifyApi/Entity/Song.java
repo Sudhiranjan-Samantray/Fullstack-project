@@ -1,17 +1,16 @@
 package in.Spotify_Clone.musifyApi.Entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "songs")
 @Builder
-@Table(name = "albums")
-public class Album {
+public class Song {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +21,11 @@ public class Album {
     @Column(name = "description")
     private String desc;
 
-    private String bgColour;
+    private String album;
 
-    private String imageUrl;
+    private String image;
 
+    private String file;
+
+    private String duaration;
 }
-
-
